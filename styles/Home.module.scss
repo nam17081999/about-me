@@ -1,0 +1,235 @@
+.intro {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    backdrop-filter: blur(0.3rem);
+    margin-top: 5%;
+    padding: 2rem;
+
+    .intro__name {
+        color: rgb(46, 54, 63);
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .intro__left {
+        border-right: 1px solid #0000000f;
+    }
+
+    .intro__link {
+        margin-top: 45px;
+
+        .iconscontainer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: #000;
+
+            .icon {
+                position: relative;
+                display: flex;
+                width: 40px;
+                height: 40px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 18px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.07);
+
+                .anticon {
+                    font-size: 4rem;
+                    background-image: linear-gradient(375deg,
+                            rgb(28, 199, 208),
+                            rgb(46, 222, 152));
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .content {
+                    position: absolute;
+                    top: 0;
+                    padding: .30rem .55rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    border-radius: 50px;
+                    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
+                        0 5px 15px rgba(0, 0, 0, 0.07);
+
+                    pointer-events: none;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    opacity: 0;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                .facebook {
+                    color: #fff;
+                    background-color: #3B5999;
+                }
+
+                .tiktok {
+                    color: #fff;
+                    background-color: #000;
+                }
+
+                .steam {
+                    color: #fff;
+                    background-color: #182d59;
+                }
+
+                .github {
+                    color: #fff;
+                    background-color: #333;
+                }
+            }
+
+            &:hover {
+                .facebook {
+                    color: #fff;
+                    background-color: #3B5999;
+                }
+
+                .tiktok {
+                    color: #fff;
+                    background-color: #000;
+                }
+
+                .github {
+                    color: #fff;
+                    background-color: #333;
+                }
+
+                .steam {
+                    color: #fff;
+                    background-color: #182d59;
+                }
+
+                .content {
+                    top: -35px;
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+
+    .intro__right {
+
+        .key {
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            color: rgb(148, 146, 146);
+        }
+    }
+
+    .intro__right>div {
+        height: 100%;
+    }
+
+}
+
+.menu {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    position: relative;
+    backdrop-filter: blur(0.3rem);
+    display: flex;
+    justify-content: center;
+
+    .menu__container {
+
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+
+        .menu__item {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 6.25rem;
+
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            width: 6.25rem;
+            background-color: rgba(235, 240, 243, 0.8);
+            border-radius: 1rem;
+            text-decoration: none;
+            font-weight: 700;
+            color: #456;
+            cursor: pointer;
+        }
+
+        .menu__item+.menu__item {
+            margin-top: 1rem;
+
+        }
+
+    }
+}
+
+.extends {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    position: relative;
+    backdrop-filter: blur(0.3rem);
+    padding: 30px;
+
+    .extends__title {
+        font-size: 35px;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .extends__title::after {
+        position: absolute;
+        content: '';
+        height: 5px;
+        width: 8%;
+        background-image: linear-gradient(142.17deg, #cc2dc4 6.66%, #cead1c 91.48%);
+        top: 110%;
+        left: 0;
+        border-radius: 25px;
+    }
+
+    .extends__h3 {
+        font-size: 22px;
+        font-weight: 700;
+        position: relative;
+        margin-top: 40px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            height: 3px;
+            width: 15%;
+            background-image: linear-gradient(142.17deg, #cc2dc4 6.66%, #cead1c 91.48%);
+            top: 110%;
+            left: 0;
+            border-radius: 25px;
+        }
+    }
+
+    .name_project {
+        color: rgb(53, 53, 53);
+        font-size: 1.17em;
+        font-weight: 700;
+    }
+
+    .carousel__content {
+        width: 100%;
+        padding: 30px 60px;
+        background: linear-gradient(to top left, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+        border-radius: 25px;
+        height: 140px;
+    }
+}
