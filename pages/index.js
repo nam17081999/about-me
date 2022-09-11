@@ -20,48 +20,52 @@ export default function Home() {
                     <Avatar />
                   </Col>
                   <Col span={16}>
-                    <Row className='intro__info' gutter={[8, 8]}>
-                      <Col span={24}>
-                        <h1 className='intro__name'>Hoàng Đức Nam</h1>
-                      </Col>
-                      <Col span={24}>
-                        Developer
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col span={24} className='intro__link'>
-                        <Row gutter={[16, 16]}>
-                          <Col>
-                            <a className='iconscontainer' href="https://www.facebook.com/mr.namtuoc/" rel="noreferrer" target="_blank">
-                              <div className='icon facebook'>
-                                <FaFacebookF />
-                                <span className='content facebook'>Facebook</span>
-                              </div>
-                            </a>
+                    <Row justify="center">
+                      <Col span={20}>
+                        <Row className='intro__info' gutter={[8, 8]}>
+                          <Col span={24}>
+                            <h1 className='intro__name'>Hoàng Đức Nam</h1>
                           </Col>
-                          <Col>
-                            <a className='iconscontainer' href="https://www.tiktok.com/@namtuoc" rel="noreferrer" target="_blank">
-                              <div className='icon tiktok'>
-                                <FaTiktok />
-                                <span className='content tiktok'>TikTok</span>
-                              </div>
-                            </a>
+                          <Col span={24}>
+                            Developer
                           </Col>
-                          <Col>
-                            <a className='iconscontainer' href="https://steamcommunity.com/id/wibu911/" rel="noreferrer" target="_blank">
-                              <div className='icon steam'>
-                                <FaSteam />
-                                <span className='content steam'>Steam</span>
-                              </div>
-                            </a>
-                          </Col>
-                          <Col>
-                            <a className='iconscontainer' href="https://github.com/nam1708" rel="noreferrer" target="_blank">
-                              <div className='icon github' >
-                                <FaGithub />
-                                <span className='content github'>GitHub</span>
-                              </div>
-                            </a>
+                        </Row>
+                        <Row>
+                          <Col className='intro__link'>
+                            <Row gutter={[16, 16]}>
+                              <Col>
+                                <a className='iconscontainer' href="https://www.facebook.com/mr.namtuoc/" rel="noreferrer" target="_blank">
+                                  <div className='icon facebook'>
+                                    <FaFacebookF />
+                                    <span className='content facebook'>Facebook</span>
+                                  </div>
+                                </a>
+                              </Col>
+                              <Col>
+                                <a className='iconscontainer' href="https://www.tiktok.com/@namtuoc" rel="noreferrer" target="_blank">
+                                  <div className='icon tiktok'>
+                                    <FaTiktok />
+                                    <span className='content tiktok'>TikTok</span>
+                                  </div>
+                                </a>
+                              </Col>
+                              <Col>
+                                <a className='iconscontainer' href="https://steamcommunity.com/id/wibu911/" rel="noreferrer" target="_blank">
+                                  <div className='icon steam'>
+                                    <FaSteam />
+                                    <span className='content steam'>Steam</span>
+                                  </div>
+                                </a>
+                              </Col>
+                              <Col>
+                                <a className='iconscontainer' href="https://github.com/nam1708" rel="noreferrer" target="_blank">
+                                  <div className='icon github' >
+                                    <FaGithub />
+                                    <span className='content github'>GitHub</span>
+                                  </div>
+                                </a>
+                              </Col>
+                            </Row>
                           </Col>
                         </Row>
                       </Col>
@@ -196,10 +200,10 @@ export default function Home() {
                       <div>
                         <h3 className='carousel__content'>
                           <Row gutter={[16, 16]}>
-                            <Col span={3}>
+                            <Col lg={3} md={4} sm={5}>
                               <Img src='jack-ma' />
                             </Col>
-                            <Col span={21}>
+                            <Col lg={21} md={20} sm={19}>
                               <Row align='middle'>
                                 <Col span={24}>
                                   Jack Ma
@@ -215,10 +219,10 @@ export default function Home() {
                       <div>
                         <h3 className='carousel__content'>
                           <Row gutter={[16, 16]}>
-                            <Col span={3}>
+                            <Col lg={3} md={4} sm={5}>
                               <Img src='bill-gates' />
                             </Col>
-                            <Col span={21}>
+                            <Col lg={21} md={20} sm={19}>
                               <Row align='middle'>
                                 <Col span={24}>
                                   Bill Gates
