@@ -1,13 +1,39 @@
-import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
-import { Carousel, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import Script from "next/script";
-import { FaFacebookF, FaGithub, FaSteam, FaTiktok } from "react-icons/fa";
+import { useState } from "react";
+import { FaFacebookF, FaGithub, FaYoutube, FaTiktok } from "react-icons/fa";
+import AboutMe from "../components/AboutMe";
 import Avatar from "../components/Avatar";
-import Img from "../components/Img";
-import ImgProject from "../components/ImgProject";
+import Education from "../components/Education";
 import LayoutWeb from "../components/LayoutWeb";
 
 export default function Home() {
+
+  const [render, setRender] = useState({
+    aboutMe: true,
+    education: false,
+    target: false,
+    favorite: false
+  })
+
+  const clickAboutMe = () => {
+    setRender({
+      aboutMe: true,
+      education: false,
+      target: false,
+      favorite: false
+    })
+  }
+
+  const clickEducation = () => {
+    setRender({
+      education: true,
+      aboutMe: false,
+      target: false,
+      favorite: false
+    })
+  }
+
   return (
     <LayoutWeb>
       <Row gutter={[32, 32]}>
@@ -50,10 +76,10 @@ export default function Home() {
                                 </a>
                               </Col>
                               <Col>
-                                <a className='iconscontainer' href="https://steamcommunity.com/id/wibu911/" rel="noreferrer" target="_blank">
-                                  <div className='icon steam'>
-                                    <FaSteam />
-                                    <span className='content steam'>Steam</span>
+                                <a className='iconscontainer' href="https://www.youtube.com/c/NamT%C6%B0%E1%BB%9BcGaming" rel="noreferrer" target="_blank">
+                                  <div className='icon youtube'>
+                                    <FaYoutube />
+                                    <span className='content youtube'>Youtube</span>
                                   </div>
                                 </a>
                               </Col>
@@ -101,7 +127,7 @@ export default function Home() {
             <Col span={4}>
               <div className='menu'>
                 <div className='menu__container'>
-                  <div className='menu__item'>
+                  <div className={render.aboutMe ? 'menu__item menu__item-focus' : 'menu__item'} onClick={clickAboutMe}>
                     <Script src="https://cdn.lordicon.com/xdjxvujz.js" />
                     <lord-icon
                       src="https://cdn.lordicon.com/eszyyflr.json"
@@ -111,7 +137,7 @@ export default function Home() {
                     </lord-icon>
                     bản thân
                   </div>
-                  <div className='menu__item'>
+                  <div className={render.education ? 'menu__item menu__item-focus' : 'menu__item'} onClick={clickEducation}>
                     <Script src="https://cdn.lordicon.com/xdjxvujz.js" />
                     <lord-icon
                       src="https://cdn.lordicon.com/wxnxiano.json"
@@ -121,7 +147,7 @@ export default function Home() {
                     </lord-icon>
                     học vấn
                   </div>
-                  <div className='menu__item'>
+                  <div className={render.target ? 'menu__item menu__item-focus' : 'menu__item'}>
                     <Script src="https://cdn.lordicon.com/xdjxvujz.js" />
                     <lord-icon
                       src="https://cdn.lordicon.com/iltqorsz.json"
@@ -131,7 +157,7 @@ export default function Home() {
                     </lord-icon>
                     mục tiêu
                   </div>
-                  <div className='menu__item'>
+                  <div className={render.favorite ? 'menu__item menu__item-focus' : 'menu__item'}>
                     <Script src="https://cdn.lordicon.com/xdjxvujz.js" />
                     <lord-icon
                       src="https://cdn.lordicon.com/rjzlnunf.json"
@@ -146,97 +172,8 @@ export default function Home() {
             </Col>
             <Col span={20}>
               <div className='extends'>
-                <Row gutter={[24, 24]}>
-                  <Col span={24} >
-                    <h1 className='extends__title'>
-                      Giới thiệu
-                    </h1>
-                  </Col>
-                  <Col>
-                    <p>Mình từng là một sinh viên của trường đại học Giao Thông Vận Tải - Hà Nội. Mình đang học tập, theo đuổi ngành Công Nghệ Thông Tin.</p>
-                    <br />
-                    <p> Hiện tại mình đang làm việc và học tập tại  Công Ty Cổ Phần Giải Pháp Netko</p>
-                  </Col>
-                  <Col span={24}>
-                    <h3 className='extends__h3'>
-                      Mình đã làm được
-                    </h3>
-                  </Col>
-                  <Col span={24}>
-                    <Row gutter={[48, 48]}>
-                      <Col span={12}>
-                        <a className='iconscontainer' href="https://quiz.netko.vn/" rel="noreferrer" target="_blank">
-                          <Row justify="center" gutter={[8, 8]}>
-                            <Col>
-                              <ImgProject src='quiz' />
-                            </Col>
-                            <Col>
-                              <h2 className="name_project">Netko Quiz</h2>
-                            </Col>
-                          </Row>
-                        </a>
-                      </Col>
-                      <Col span={12}>
-                        <a className='iconscontainer' href="https://nammusic.herokuapp.com/" rel="noreferrer" target="_blank">
-                          <Row justify="center" gutter={[8, 8]}>
-                            <Col>
-                              <ImgProject src='music' />
-                            </Col>
-                            <Col>
-                              <h2 className="name_project">Play Music</h2>
-                            </Col>
-                          </Row>
-                        </a>
-                      </Col>
-                    </Row>
-                  </Col>
-                  <Col>
-                    <h3 className='extends__h3'>
-                      Những câu nói cho mình cảm hứng
-                    </h3>
-                  </Col>
-                  <Col>
-                    <Carousel autoplay effect="fade" arrows prevArrow={<CaretLeftOutlined />} nextArrow={<CaretRightOutlined />}>
-                      <div>
-                        <h3 className='carousel__content'>
-                          <Row gutter={[16, 16]}>
-                            <Col lg={3} md={4} sm={5}>
-                              <Img src='jack-ma' />
-                            </Col>
-                            <Col lg={21} md={20} sm={19}>
-                              <Row align='middle'>
-                                <Col span={24}>
-                                  Jack Ma
-                                </Col>
-                                <Col>
-                                  “Gà gáy thì trời sáng mà gà không gáy thì trời cũng sẽ sáng. Trời sáng hay không đâu phụ thuộc vào con gà. Vấn đề là trời sáng ai sẽ là người thức tỉnh.”
-                                </Col>
-                              </Row>
-                            </Col>
-                          </Row>
-                        </h3>
-                      </div>
-                      <div>
-                        <h3 className='carousel__content'>
-                          <Row gutter={[16, 16]}>
-                            <Col lg={3} md={4} sm={5}>
-                              <Img src='bill-gates' />
-                            </Col>
-                            <Col lg={21} md={20} sm={19}>
-                              <Row align='middle'>
-                                <Col span={24}>
-                                  Bill Gates
-                                </Col>
-                                <Col>
-                                  “Nếu bạn sinh ra trong nghèo khó, đó không phải là lỗi của bạn. Nhưng nếu bạn chết trong nghèo khó, thì đó là lỗi của bạn”
-                                </Col>
-                              </Row>
-                            </Col>
-                          </Row>
-                        </h3>
-                      </div>
-                    </Carousel></Col>
-                </Row>
+                {render.aboutMe && <AboutMe />}
+                {render.education && <Education />}
               </div>
             </Col>
           </Row>

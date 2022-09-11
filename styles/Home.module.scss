@@ -68,25 +68,6 @@
                     transition: all 0.2s ease-in-out;
                 }
 
-                .facebook {
-                    color: #fff;
-                    background-color: #3B5999;
-                }
-
-                .tiktok {
-                    color: #fff;
-                    background-color: #000;
-                }
-
-                .steam {
-                    color: #fff;
-                    background-color: #182d59;
-                }
-
-                .github {
-                    color: #fff;
-                    background-color: #333;
-                }
             }
 
             &:hover {
@@ -105,13 +86,13 @@
                     background-color: #333;
                 }
 
-                .steam {
+                .youtube {
                     color: #fff;
-                    background-color: #182d59;
+                    background-color: #cf0707;
                 }
 
                 .content {
-                    top: -35px;
+                    top: -45px;
                     opacity: 0.9;
                 }
             }
@@ -167,6 +148,19 @@
             font-weight: 700;
             color: #456;
             cursor: pointer;
+
+            &:hover {
+                background-image: linear-gradient(142.17deg, rgba(79, 147, 241, 0.3) 6.66%, rgba(222, 48, 253, 0.3) 91.48%);
+            }
+        }
+
+        .menu__item-focus {
+            background-image: linear-gradient(142.17deg, rgb(79 147 241 / 81%) 6.66%, rgb(170 48 253 / 56%) 91.48%);
+
+            &:hover {
+                background-image: linear-gradient(142.17deg, rgb(79 147 241 / 81%) 6.66%, rgb(170 48 253 / 56%) 91.48%);
+            }
+
         }
 
         .menu__item+.menu__item {
@@ -196,16 +190,19 @@
         height: 5px;
         width: 8%;
         background-image: linear-gradient(142.17deg, #cc2dc4 6.66%, #cead1c 91.48%);
-        top: 110%;
+        top: 90%;
         left: 0;
         border-radius: 25px;
+    }
+
+    .extend-item-para {
+        margin-bottom: 10px;
     }
 
     .extends__h3 {
         font-size: 22px;
         font-weight: 700;
         position: relative;
-        margin-top: 40px;
 
         &::after {
             position: absolute;
@@ -213,7 +210,7 @@
             height: 3px;
             width: 15%;
             background-image: linear-gradient(142.17deg, #cc2dc4 6.66%, #cead1c 91.48%);
-            top: 110%;
+            top: 90%;
             left: 0;
             border-radius: 25px;
         }
@@ -221,7 +218,6 @@
 
     .name_project {
         color: rgb(53, 53, 53);
-        font-size: 1.17em;
         font-weight: 700;
     }
 
@@ -232,4 +228,55 @@
         border-radius: 25px;
         height: 140px;
     }
+
+    .extends__title2 {
+        display: flex;
+        align-items: center;
+
+        .title__icon {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+        }
+
+        .extends__h2 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
+    .step__title {
+        font-weight: 700;
+    }
+
+    .step__time {
+        color: rgba(47, 47, 47, 0.8);
+        margin-bottom: 8px;
+        font-size: 15.7px;
+    }
+
+    .step__description {
+        color: rgb(47, 47, 47);
+        font-size: 16px;
+    }
+
+    .skill {
+        padding: 30px;
+        border: 2px solid #EBF0F2;
+        border-radius: 20px;
+    }
+
+    .progress {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .name__language {
+            margin-top: 10px;
+            color: rgb(53, 53, 53);
+            font-weight: 700;
+        }
+
+    }
+
 }
