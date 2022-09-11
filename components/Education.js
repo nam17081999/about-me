@@ -67,7 +67,7 @@ function Education() {
                                 description={
                                     <>
                                         <p className="step__time">2019 - nay</p>
-                                        <p className="step__description">Em đã nắm được "sơ sơ" các kiến thức nền tảng của HTML, CSS, Javascrpit và React.</p>
+                                        <p className="step__description">Em đã nắm được &quot;sơ sơ&quot; các kiến thức nền tảng của HTML, CSS, Javascrpit và React.</p>
                                     </>
                                 }
                             />
