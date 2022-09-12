@@ -24,13 +24,13 @@ function AboutMe() {
             <Col span={24}>
                 <Row gutter={[48, 48]}>
                     <Col span={12}>
-                        <a className='iconscontainer' href="https://quiz.netko.vn/" rel="noreferrer" target="_blank">
+                        <a className='iconscontainer' href="https://www.youtube.com/c/NamT%C6%B0%E1%BB%9BcGaming" rel="noreferrer" target="_blank">
                             <Row justify="center" gutter={[8, 8]}>
                                 <Col>
-                                    <ImgProject src='quiz' />
+                                    <ImgProject src='youtube' />
                                 </Col>
                                 <Col>
-                                    <h4 className="name_project">Netko Quiz</h4>
+                                    <h4 className="name_project">Kênh Youtube</h4>
                                 </Col>
                             </Row>
                         </a>
@@ -43,18 +43,6 @@ function AboutMe() {
                                 </Col>
                                 <Col>
                                     <h4 className="name_project">Play Music</h4>
-                                </Col>
-                            </Row>
-                        </a>
-                    </Col>
-                    <Col span={12}>
-                        <a className='iconscontainer' href="https://www.youtube.com/c/NamT%C6%B0%E1%BB%9BcGaming" rel="noreferrer" target="_blank">
-                            <Row justify="center" gutter={[8, 8]}>
-                                <Col>
-                                    <ImgProject src='youtube' />
-                                </Col>
-                                <Col>
-                                    <h4 className="name_project">Kênh Youtube</h4>
                                 </Col>
                             </Row>
                         </a>

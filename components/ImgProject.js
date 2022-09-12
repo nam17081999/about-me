@@ -8,7 +8,9 @@ function ImgProject({ src }) {
             <div className={styles.img}>
                 <Image
                     src={require(`../img/${src}.jpg`)}
-                    alt='avatar'
+                    alt='project'
+                    width={390}
+                    height={180}
                 />
             </div>
         </div>

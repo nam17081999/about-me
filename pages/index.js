@@ -19,6 +19,7 @@ export default function Home() {
   })
 
   const clickAboutMe = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setRender({
       aboutMe: true,
       education: false,
@@ -28,6 +29,7 @@ export default function Home() {
   }
 
   const clickEducation = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setRender({
       education: true,
       aboutMe: false,
@@ -37,6 +39,7 @@ export default function Home() {
   }
 
   const clickTarget = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setRender({
       education: false,
       aboutMe: false,
@@ -46,6 +49,7 @@ export default function Home() {
   }
 
   const clickFavorite = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setRender({
       education: false,
       aboutMe: false,
