@@ -5,7 +5,9 @@ import { FaFacebookF, FaGithub, FaYoutube, FaTiktok } from "react-icons/fa";
 import AboutMe from "../components/AboutMe";
 import Avatar from "../components/Avatar";
 import Education from "../components/Education";
+import Favorite from "../components/Favorite";
 import LayoutWeb from "../components/LayoutWeb";
+import Target from "../components/Target";
 
 export default function Home() {
 
@@ -31,6 +33,24 @@ export default function Home() {
       aboutMe: false,
       target: false,
       favorite: false
+    })
+  }
+
+  const clickTarget = () => {
+    setRender({
+      education: false,
+      aboutMe: false,
+      target: true,
+      favorite: false
+    })
+  }
+
+  const clickFavorite = () => {
+    setRender({
+      education: false,
+      aboutMe: false,
+      target: false,
+      favorite: true
     })
   }
 
@@ -147,7 +167,7 @@ export default function Home() {
                     </lord-icon>
                     học vấn
                   </div>
-                  <div className={render.target ? 'menu__item menu__item-focus' : 'menu__item'}>
+                  <div className={render.target ? 'menu__item menu__item-focus' : 'menu__item'} onClick={clickTarget}>
                     <Script src="https://cdn.lordicon.com/xdjxvujz.js" />
                     <lord-icon
                       src="https://cdn.lordicon.com/iltqorsz.json"
@@ -157,7 +177,7 @@ export default function Home() {
                     </lord-icon>
                     mục tiêu
                   </div>
-                  <div className={render.favorite ? 'menu__item menu__item-focus' : 'menu__item'}>
+                  <div className={render.favorite ? 'menu__item menu__item-focus' : 'menu__item'} onClick={clickFavorite}>
                     <Script src="https://cdn.lordicon.com/xdjxvujz.js" />
                     <lord-icon
                       src="https://cdn.lordicon.com/rjzlnunf.json"
@@ -174,6 +194,8 @@ export default function Home() {
               <div className='extends'>
                 {render.aboutMe && <AboutMe />}
                 {render.education && <Education />}
+                {render.target && <Target />}
+                {render.favorite && <Favorite />}
               </div>
             </Col>
           </Row>

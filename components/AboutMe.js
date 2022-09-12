@@ -4,6 +4,7 @@ import Img from "../components/Img";
 import ImgProject from "../components/ImgProject";
 
 function AboutMe() {
+
     return (
         <Row gutter={[24, 24]}>
             <Col span={24} >
@@ -42,6 +43,18 @@ function AboutMe() {
                                 </Col>
                                 <Col>
                                     <h4 className="name_project">Play Music</h4>
+                                </Col>
+                            </Row>
+                        </a>
+                    </Col>
+                    <Col span={12}>
+                        <a className='iconscontainer' href="https://www.youtube.com/c/NamT%C6%B0%E1%BB%9BcGaming" rel="noreferrer" target="_blank">
+                            <Row justify="center" gutter={[8, 8]}>
+                                <Col>
+                                    <ImgProject src='youtube' />
+                                </Col>
+                                <Col>
+                                    <h4 className="name_project">Kênh Youtube</h4>
                                 </Col>
                             </Row>
                         </a>

@@ -156,6 +156,7 @@
 
         .menu__item-focus {
             background-image: linear-gradient(142.17deg, rgb(79 147 241 / 81%) 6.66%, rgb(170 48 253 / 56%) 91.48%);
+            box-shadow: inset -0.25rem -0.25rem 0.3125rem rgb(0 0 0 / 0%), inset 0.25rem 0.25rem 0.3125rem rgb(255 255 255 / 23%);
 
             &:hover {
                 background-image: linear-gradient(142.17deg, rgb(79 147 241 / 81%) 6.66%, rgb(170 48 253 / 56%) 91.48%);
@@ -209,7 +210,7 @@
             position: absolute;
             content: '';
             height: 3px;
-            width: 15%;
+            width: 30%;
             background-image: linear-gradient(142.17deg, #cc2dc4 6.66%, #cead1c 91.48%);
             top: 90%;
             left: 0;
@@ -278,6 +279,40 @@
             font-weight: 700;
         }
 
+    }
+
+    .img_favorite {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .favorite-content {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background: linear-gradient(to top left, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+        border-radius: 25px;
+        box-shadow: 0 6px 10px rgb(0 0 0 / 20%);
+        margin-bottom: 20px;
+        transition: all 0.2s linear;
+
+        &:hover {
+            -ms-transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+            box-shadow: 0 8px 12px rgb(0 0 0 / 30%);
+        }
+
+        .banner {
+            min-width: 190px;
+            height: 100px;
+            margin-right: 20px;
+
+            img {
+                border-radius: 15px;
+            }
+        }
     }
 
 }

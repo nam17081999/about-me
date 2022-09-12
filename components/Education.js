@@ -1,9 +1,17 @@
-import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
-import { Carousel, Col, Progress, Row, Steps } from "antd";
-import Img from "../components/Img";
-import ImgProject from "../components/ImgProject";
+import { Col, Progress, Row, Steps } from "antd";
+import { useState } from "react";
 
 function Education() {
+
+    const [renderSkill, setRenderSkill] = useState(false)
+
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        setTimeout(() => {
+            currentScrollPos > 250 ? setRenderSkill(true) : setRenderSkill(false)
+        }, 200)
+    }
+
     return (
         <Row gutter={[24, 24]}>
             <Col span={24} >
@@ -67,7 +75,7 @@ function Education() {
                                 description={
                                     <>
                                         <p className="step__time">2019 - nay</p>
-                                        <p className="step__description">Em đã nắm được &quot;sơ sơ&quot; các kiến thức nền tảng của HTML, CSS, Javascrpit và React.</p>
+                                        <p className="step__description">Em đã nắm được &quot;sơ sơ&quot; các kiến thức nền tảng của HTML, CSS, Javascript và React.</p>
                                     </>
                                 }
                             />
@@ -98,19 +106,31 @@ function Education() {
                         <div className="skill">
                             <Row>
                                 <Col span={6} className='progress'>
-                                    <Progress type="circle" percent={75} />
+                                    <Progress type="circle" percent={renderSkill ? 75 : 0} strokeColor={{
+                                        '0%': '#108ee9',
+                                        '100%': '#87d068',
+                                    }} />
                                     <h4 className="name__language">HTML</h4>
                                 </Col>
                                 <Col span={6} className='progress'>
-                                    <Progress type="circle" percent={60} />
+                                    <Progress type="circle" percent={renderSkill ? 60 : 0} strokeColor={{
+                                        '0%': '#108ee9',
+                                        '100%': '#87d068',
+                                    }} />
                                     <h4 className="name__language">CSS</h4>
                                 </Col>
                                 <Col span={6} className='progress'>
-                                    <Progress type="circle" percent={50} />
+                                    <Progress type="circle" percent={renderSkill ? 50 : 0} strokeColor={{
+                                        '0%': '#108ee9',
+                                        '100%': '#87d068',
+                                    }} />
                                     <h4 className="name__language">Javascript</h4>
                                 </Col>
                                 <Col span={6} className='progress'>
-                                    <Progress type="circle" percent={60} />
+                                    <Progress type="circle" percent={renderSkill ? 60 : 0} strokeColor={{
+                                        '0%': '#108ee9',
+                                        '100%': '#87d068',
+                                    }} />
                                     <h4 className="name__language">React</h4>
                                 </Col>
                             </Row>

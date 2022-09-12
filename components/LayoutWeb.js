@@ -8,7 +8,7 @@ function LayoutWeb({ children }) {
             justify='center'
             className={styles.main}
         >
-            <Col xxl={14} xl={19} lg={23} sm={23}>
+            <Col xxl={15} xl={19} lg={23} sm={23}>
                 {children}
             </Col>
         </Row>
